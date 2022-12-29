@@ -90,18 +90,4 @@ for i in range(10):
     driver.find_element(By.XPATH, "/html/body/div/div[4]/div[3]/div[1]/div[3]/ul/li[5]/a").click()
 
 
-'''
-else:
-    driver.switch_to.frame("pointAfterListIframe")
-    driver.find_element(By.CSS_SELECTOR, "label#spoilerYnLable").click()
-    time.sleep(1)
-    print("스포 있음!")
-    for i in range(10):
-        path_ = "/html/body/div/div/div[5]/ul/li["+str(i+1)+"]/div[2]/p/span[2]"
-        driver.switch_to.frame("pointAfterListIframe")
-        review = driver.find_element(By.XPATH, path_)
-        print(i+1, '.' , review.text)
-        driver.back()
-        driver.find_element(By.XPATH, "/html/body/div/div[4]/div[3]/div[1]/div[3]/ul/li[5]/a").click()
-'''
 driver.close()
